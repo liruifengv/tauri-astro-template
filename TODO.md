@@ -5,5 +5,6 @@
 - [ ] lint
 - [ ] format
 - [ ] ci
+- [ ] changeset
 - [ ] release
 - [ ] support tauri mobile

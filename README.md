@@ -1,2 +1,1 @@
 # Tauri + Astro Template
-
