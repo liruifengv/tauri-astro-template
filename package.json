@@ -9,7 +9,6 @@
     "preview": "astro preview",
     "astro": "astro",
     "tauri": "tauri",
-    "prepare": "husky install",
     "lint": "eslint src/ --ext .astro,.vue,.js,.jsx,.cjs,.mjs --fix",
     "lint:ci": "eslint src/ --ext .astro,.vue,.js,.jsx,.cjs,.mjs",
     "format": "prettier --write .",
