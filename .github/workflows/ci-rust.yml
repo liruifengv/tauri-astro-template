@@ -35,14 +35,14 @@ jobs:
       - name: Check Code Format
         uses: actions-rs/cargo@v1
         with:
-          path: ~/src-tauri
+          path: ./src-tauri
           command: fmt
           args: --check
 
       - name: Code Lint
         uses: actions-rs/cargo@v1
         with:
-          path: ~/src-tauri
+          path: ./src-tauri
           command: clippy
           args: --all-targets --all-features -- -D warnings
 
