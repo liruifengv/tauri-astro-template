@@ -32,22 +32,21 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
           components: rustfmt, clippy
 
-      - run: cd src-tauri
-      
       - name: Check Code Format
         uses: actions-rs/cargo@v1
         with:
           command: fmt
-          args: --check
+          args: --check --manifest-path src-tauri/Cargo.toml
 
       - name: Code Lint
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: --all-targets --all-features -- -D warnings
+          args: --all-targets --all-features -- -D warnings --manifest-path src-tauri/Cargo.toml
 
       - name: Test
         uses: actions-rs/cargo@v1
         with:
           command: test
-          args: --all-features
+          args: --all-features --manifest-path src-tauri/Cargo.toml
+
