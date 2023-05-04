@@ -13,7 +13,8 @@
     "lint:ci": "eslint src/ --ext .astro,.vue,.js,.jsx,.cjs,.mjs",
     "format": "prettier --write  --plugin-search-dir=. .",
     "format:ci": "prettier --check  --plugin-search-dir=. .",
-    "style": "stylelint \"**/*.(astro|scss|css|less)\" --fix"
+    "style": "stylelint \"**/*.(astro|scss|css|less)\" --fix",
+    "postinstall": "node scripts/postinstall.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.2.0",
