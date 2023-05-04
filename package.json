@@ -9,12 +9,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "tauri": "tauri",
-    "prepare": "husky install",
     "lint": "eslint src/ --ext .astro,.vue,.js,.jsx,.cjs,.mjs --fix",
     "lint:ci": "eslint src/ --ext .astro,.vue,.js,.jsx,.cjs,.mjs",
-    "format": "prettier --write .",
-    "format:ci": "prettier --check .",
-    "style": "stylelint \"**/*.(astro|scss|css|less)\" --fix"
+    "format": "prettier --write  --plugin-search-dir=. .",
+    "format:ci": "prettier --check  --plugin-search-dir=. .",
+    "style": "stylelint \"**/*.(astro|scss|css|less)\" --fix",
+    "postinstall": "node scripts/postinstall.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.2.0",
