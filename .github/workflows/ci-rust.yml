@@ -42,7 +42,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: --all-targets --all-features -- -D warnings --manifest-path src-tauri/Cargo.toml
+          args: --all-targets --all-features --manifest-path src-tauri/Cargo.toml -- -D warnings
 
       - name: Test
         uses: actions-rs/cargo@v1
