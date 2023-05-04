@@ -18,19 +18,14 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: ^7.0
-
       - name: Install Deps
-        run: pnpm i
+        run: npm i
       
       - name: Format
-        run: pnpm run format:ci
+        run: npm run format:ci
 
       - name: Lint
-        run: pnpm run lint:ci
+        run: npm run lint:ci
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
